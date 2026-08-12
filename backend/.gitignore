@@ -1,0 +1,16 @@
+# Dependencies
+node_modules/
+
+# Environment Secrets (Crucial for database passwords later)
+.env
+.env.local
+
+# Debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.eslintcache
+
+# Operating system files
+Thumbs.db
+.DS_Store
