@@ -7,8 +7,8 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.tabSize": 2,
   "editor.insertSpaces": true,
+  "editor.detectIndentation": false,
   "editor.wordWrap": "on",
-  "editor.detectIndentation": true,
   "editor.trimAutoWhitespace": true,
   "editor.renderWhitespace": "trailing",
   "editor.codeActionsOnSave": {
