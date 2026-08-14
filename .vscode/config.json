@@ -1,3 +1,79 @@
 {
-  "files.autoSave": "afterDelay"
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 1000,
+  
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.wordWrap": "on",
+  "editor.detectIndentation": true,
+  "editor.trimAutoWhitespace": true,
+  "editor.renderWhitespace": "trailing",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.organizeImports": true
+  },
+  
+  "files.exclude": {
+    "**/.git": true,
+    "**/.DS_Store": true,
+    "**/*.log": true,
+    "**/node_modules": true,
+    "**/.next": true,
+    "**/dist": true,
+    "**/build": true
+  },
+  
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/dist": true,
+    "**/.git": true,
+    "**/build": true,
+    "**/.next": true
+  },
+  
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "terminal.integrated.fontSize": 12,
+  "terminal.integrated.lineHeight": 1.5,
+  
+  "git.ignoreLimitWarning": true,
+  "git.autorefresh": true,
+  
+  "extensions.recommendations": [
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "mongodb.mongodb-vscode",
+    "thunder-client.client",
+    "ms-vscode.live-server",
+    "ritwickdey.liveserver",
+    "eamodio.gitlens"
+  ],
+  
+  "debug.openExplorerOnEnd": true,
+  "debug.inlineValues": true,
+  
+  "workbench.editor.tabSizing": "shrink",
+  "workbench.sideBar.location": "left",
+  "workbench.panel.defaultLocation": "bottom",
+  "workbench.colorTheme": "Default Dark Modern",
+  
+  "npm.packageManager": "npm",
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
