@@ -1,0 +1,151 @@
+📋 GrabBoss Project - Setup Tasks & Goals
+===========================================
+
+## 🔐 GitHub Secrets Setup (Required for CI/CD)
+Location: GitHub → Settings → Secrets and variables → Actions
+
+[ ] DEPLOY_HOST
+    Description: Your server hostname or IP address
+    Example: example.com or 192.168.1.100
+    Value: _________________________
+
+[ ] DEPLOY_USER
+    Description: SSH username for deployment
+    Example: ubuntu, root, or your-username
+    Value: _________________________
+
+[ ] DEPLOY_KEY
+    Description: SSH private key for server access
+    How to get: Content of ~/.ssh/id_rsa file
+    Value: _________________________
+
+[ ] SNYK_TOKEN (Optional)
+    Description: Security scanning token from Snyk
+    How to get: Sign up at https://snyk.io and generate token
+    Value: _________________________
+
+
+## 📦 Backend Setup
+[ ] Install backend dependencies
+    Command: cd backend && npm install
+
+[ ] Create .env file in backend/
+    Variables needed:
+    - MONGODB_URI=mongodb://localhost:27017/grabboss
+    - PORT=5000
+    - JWT_SECRET=your_secret_key_here
+    - NODE_ENV=development
+
+[ ] Run tests
+    Command: npm run test
+
+[ ] Start development server
+    Command: npm run dev
+
+
+## 🎨 Frontend Setup
+[ ] Install frontend dependencies
+    Command: cd frontend && npm install
+
+[ ] Create .env.local file in frontend/ (if needed)
+    Variables: API_URL=http://localhost:5000
+
+[ ] Start development server
+    Command: npm run dev
+
+[ ] Build for production
+    Command: npm run build
+
+
+## 🗄️ Database Setup
+[ ] Install MongoDB locally or use MongoDB Atlas cloud service
+    - MongoDB Atlas: https://www.mongodb.com/cloud/atlas
+    - Local: Download from https://www.mongodb.com/try/download/community
+
+[ ] Create database named "grabboss"
+
+[ ] Test MongoDB connection with backend .env
+
+
+## 🚀 Deployment Setup
+[ ] Configure server (if not done)
+    - SSH access enabled
+    - Node.js installed
+    - PM2 or similar process manager installed
+
+[ ] Generate SSH keys (if needed)
+    Command: ssh-keygen -t rsa -b 4096
+
+[ ] Add SSH public key to server authorized_keys
+
+
+## 📝 Configuration Files
+[ ] Review and customize .github/dependabot.yml
+    - Replace "your-github-username" with actual GitHub username
+
+[ ] Update .env.example files (create templates for team)
+
+[ ] Review and adjust ESLint rules in .eslintrc.json files
+
+[ ] Configure Prettier formatting in .prettierrc.json
+
+
+## 🔍 Code Quality & Testing
+[ ] Set up ESLint in IDE
+    - Install ESLint extension in VS Code
+
+[ ] Set up Prettier formatter
+    - Install Prettier extension in VS Code
+
+[ ] Write unit tests
+    - Backend tests: backend/__tests__/
+    - Frontend tests: frontend/__tests__ or frontend/tests/
+
+[ ] Configure test coverage thresholds in jest.config.js
+
+
+## 📚 Documentation
+[ ] Create README.md for project overview
+
+[ ] Create backend API documentation
+    - List endpoints
+    - Request/response examples
+
+[ ] Create frontend documentation
+    - Components overview
+    - Installation & setup guide
+
+[ ] Create CONTRIBUTING.md for contributors
+
+
+## ☁️ CI/CD Verification
+[ ] Push to GitHub and verify workflows run
+    - Check .github/workflows/test.yml
+    - Check .github/workflows/lint.yml
+    - Check .github/workflows/deploy.yml
+    - Check .github/workflows/security.yml
+
+[ ] Monitor GitHub Actions for any failures
+
+[ ] Set branch protection rules (require checks to pass before merge)
+
+
+## 🐳 Docker Setup (Optional)
+[ ] Create Dockerfile for backend
+
+[ ] Create Dockerfile for frontend
+
+[ ] Create docker-compose.yml for local development
+
+[ ] Test Docker build locally
+
+
+## 🎯 Project Goals & Notes
+_______________________________________________
+_______________________________________________
+_______________________________________________
+_______________________________________________
+
+
+## ✅ Completed Tasks
+_______________________________________________
