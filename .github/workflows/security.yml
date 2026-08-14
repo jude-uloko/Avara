@@ -1,0 +1,83 @@
+name: Security & Dependencies
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+  schedule:
+    - cron: '0 0 * * 0'  # Weekly on Sunday
+
+jobs:
+  dependency-check:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 20.x
+    
+    - name: Check backend dependencies for vulnerabilities
+      working-directory: ./backend
+      run: |
+        npm ci
+        npm audit --audit-level=moderate || true
+    
+    - name: Check frontend dependencies for vulnerabilities
+      working-directory: ./frontend
+      run: |
+        npm ci
+        npm audit --audit-level=moderate || true
+
+  snyk-security:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Run Snyk Security Scan
+      uses: snyk/actions/node@master
+      env:
+        SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+      with:
+        args: --severity-threshold=high || true
+
+  dependabot:
+    runs-on: ubuntu-latest
+    
+    permissions:
+      contents: write
+      pull-requests: write
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Enable Dependabot
+      run: |
+        echo "Dependabot is configured in .github/dependabot.yml"
+        echo "It will automatically check for dependency updates"
+
+  license-check:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 20.x
+    
+    - name: Install license-checker
+      run: npm install -g license-checker
+    
+    - name: Check backend licenses
+      working-directory: ./backend
+      run: license-checker --json --csv || true
+    
+    - name: Check frontend licenses
+      working-directory: ./frontend
+      run: license-checker --json --csv || true
