@@ -43,7 +43,7 @@ Location: GitHub → Settings → Secrets and variables → Actions
     Command: npm run dev
 
 
-## 🎨 Frontend Setup
+## 🎨 Frontend Setup !
 [ ] Install frontend dependencies
     Command: cd frontend && npm install
 
@@ -57,7 +57,7 @@ Location: GitHub → Settings → Secrets and variables → Actions
     Command: npm run build
 
 
-## 🗄️ Database Setup
+## 🗄️ Database Setup !
 [ ] Install MongoDB locally or use MongoDB Atlas cloud service
     - MongoDB Atlas: https://www.mongodb.com/cloud/atlas
     - Local: Download from https://www.mongodb.com/try/download/community
@@ -67,7 +67,7 @@ Location: GitHub → Settings → Secrets and variables → Actions
 [ ] Test MongoDB connection with backend .env
 
 
-## 🚀 Deployment Setup
+## 🚀 Deployment Setup !
 [ ] Configure server (if not done)
     - SSH access enabled
     - Node.js installed
@@ -79,7 +79,7 @@ Location: GitHub → Settings → Secrets and variables → Actions
 [ ] Add SSH public key to server authorized_keys
 
 
-## 📝 Configuration Files
+## 📝 Configuration Files !
 [ ] Review and customize .github/dependabot.yml
     - Replace "your-github-username" with actual GitHub username
 
