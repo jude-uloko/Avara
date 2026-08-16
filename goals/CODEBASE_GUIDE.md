@@ -231,7 +231,7 @@ git pull               # Get latest changes
 ## ✅ Quick Start Checklist (Do This First!)
 
 - [ ] Copy `.env.example` to `.env` (if exists) or create `.env`
-- [ ] In `backend/.env`, add: `MONGODB_URI=mongodb://localhost:27017/grabboss`
+- [ ] In `backend/.env`, add: `MONGODB_URI=mongodb://localhost:27017/avara`
 - [ ] Run `cd backend && npm install`
 - [ ] Run `cd ../frontend && npm install`
 - [ ] Start MongoDB (local or Atlas)
