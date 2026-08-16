@@ -1,4 +1,4 @@
-📋 GrabBoss Project - Setup Tasks & Goals
+📋 Avara Project - Setup Tasks & Goals
 ===========================================
 
 ## 🔐 GitHub Secrets Setup (Required for CI/CD)
