@@ -1,10 +1,10 @@
-📚 GrabBoss Ecommerce Project - Setup Summary & Codebase Guide
+📚 Avara Ecommerce Project - Setup Summary & Codebase Guide
 ================================================================
 
 ## 🏗️ Project Structure Overview
 
 ```
-GrabBoss/
+Avara/
 ├── backend/                    # Node.js/Express API server
 │   ├── src/
 │   │   └── index.js           # Main server file (START HERE for backend)
